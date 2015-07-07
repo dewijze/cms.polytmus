@@ -32,7 +32,7 @@ There are no X in my Y:
 If a plugin is telling you that there are no images or icons available to it, you can use the upload plugin to provide it with an image. Do note that the name of the image or icon is related to the text content. Renaming an existing image will result in you seeing a new empty text block. Though the file containing your text is not lost, it is simply not requested to show.
 
 Upload plugin:
-=====
+==
 
 This plugin will upload your full size images to the selected content block plugin, for the selected page. The content block plugins handle thumbnails ect.To fully benefit from the automated content generation of some of the galleries you should stick to the following naming convention for images.
 
