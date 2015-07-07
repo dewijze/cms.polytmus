@@ -1,0 +1,116 @@
+/*----------------------------
+    Centered text content
+-----------------------------*/
+
+
+#icontext {
+    display:block;
+
+    overflow:hidden;
+
+    background: #FCFCFC;
+    width: 100%;
+    
+    margin: 0 auto 25px auto;
+    padding:20px 20px 0px 20px;
+
+    text-align:left;
+    color:#919191;
+    font-size: 1.1em;
+    line-height:130%;
+}
+
+#icontext a{
+    color: #627E99;
+    border-bottom: 1px dotted #627E99;
+}
+
+.block-bottom-margin{
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+    
+}
+
+
+
+.iconblock {
+    float:left;
+    display:block;
+    padding:20px 0 0 0;
+    border:0px solid red;
+}
+
+.iconcircle {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:1px solid rgba(62,124,206,1);
+    margin:0 auto 30px auto;
+    background:#fff;
+}
+.iconblock img {
+    margin:0 0 0 0px;
+    height:150px;
+}
+
+/*--
+.iconblock{
+    height:100%;
+    float:left;
+    border:0px solid red;
+}
+.iconblock img{
+    display: block;
+    min-height:150px;
+    max-width:160px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+--*/
+
+.icontextblock{
+    min-height:100%;
+    background: #FFFFFF;
+    border-left:1px solid #D7D7D7;
+    padding: 0 20px;
+    float:right;
+    margin-right:2%;
+    border-bottom:1px solid #D7D7D7;
+}
+
+@media screen and (min-width: 900px){
+    .iconblock{
+        width: 26%;
+    }
+    .icontextblock {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 899px){
+    .iconblock{
+        width: 99%;
+    }
+    .icontextblock {
+        width: 99%;
+    }
+
+}
+
+
+
+.deco-circle {
+    display:none;
+    position:relative;
+    z-index:1;
+    float:right;
+    margin: -120px -90px -200px 0;
+    width:170px;
+    height:170px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:1px solid #90ABC6;
+    background:#f4f8fc;
+}

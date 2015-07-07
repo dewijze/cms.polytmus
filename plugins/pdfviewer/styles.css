@@ -1,0 +1,107 @@
+/*----------------------------
+    pdf content
+-----------------------------*/
+
+
+#pdf-block {
+    display:block;
+
+    overflow:hidden;
+
+    background: #FCFCFC;
+    width: 100%;
+
+    margin: 0 auto 25px auto;
+    padding:20px 20px 0px 20px;
+
+    text-align:left;
+    color:#919191;
+    font-size: 1.1em;
+    line-height:130%;
+}
+
+#pdf-block a{
+    color: #627E99;
+    border-bottom: 1px dotted #627E99;
+}
+
+.pdf-bottom-margin{
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+
+}
+
+.pdf-circle {
+    display:block;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:1px solid rgba(62,124,206,1);
+    margin:0 auto 55px auto;
+    background:#fff;
+}
+.pdf-circle img {
+    margin-left:-2px;
+    height:150px;
+}
+
+.pdf-buttons{
+
+    float:left;
+    padding:20px 0 0 0;
+
+    //border:1px solid #D7D7D7;
+}
+
+.pdf-text {
+    min-height:300px;
+    background:#fff;
+    padding-left:20px;
+    margin-right:2%;
+    float:right;
+    border-left:1px solid #D7D7D7;
+    border-bottom:1px solid #D7D7D7;
+}
+
+#pdf-block .a-button {
+    float: right;
+    padding: 3px 12px 2px 12px;
+    color:#FFFFFF;
+    border:0px;
+    font-size:1rem;
+}
+
+
+@media screen and (min-width: 900px){
+
+    .pdf-buttons{
+        width: 26%;
+    }
+    .pdf-text {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 899px){
+    .pdf-circle {
+        float:left;
+        margin:0 0 30px 3%;
+    }
+    
+    .pdf-buttons{
+        width: 99%;
+    }
+    .pdf-text {
+        width: 99%;
+    }
+
+}
+@media screen and (max-width: 370px){
+    .pdf-circle {
+        float:none;
+        margin:0 auto 55px auto;
+        
+    }
+}

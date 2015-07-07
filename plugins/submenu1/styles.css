@@ -1,0 +1,55 @@
+/*----------------------------
+    submenu
+-----------------------------*/
+
+
+#submenu1 {
+
+    display:block;
+
+    overflow:hidden;
+    height:100%;
+
+    background: rgba(255,255,255,1);
+    width: 100%;
+    margin: -56px auto 25px auto;
+    padding:0;
+    border-top:1px solid #d7d7d7;
+    text-align:center;
+
+}
+
+
+#submenu1 nav {
+    /*float:left; */
+	margin-bottom:-2px;
+	padding:0;
+	
+}
+#submenu1 nav a {
+
+    float: left;
+	color:#8C8C8C;
+    border-left: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+    /*border-bottom: 5px solid rgba(255,255,255,0);*/
+}
+
+
+#submenu1 nav a:hover{background: #F7F7F7; color: #627E99;}
+#submenu1 nav a.active {
+    border-bottom: 5px solid rgba(62,124,206,.8);
+}
+
+@media screen and (min-width: 47em){
+    #submenu1 nav a {
+        width:auto;
+        border-bottom: 5px solid rgba(255,255,255,0);
+    }
+}
+@media screen and (max-width: 46em){
+    #submenu1 nav a {
+        width:100%;
+        border-bottom: 1px solid #D7D7D7;
+    }
+}

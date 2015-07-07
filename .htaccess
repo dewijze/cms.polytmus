@@ -1,0 +1,44 @@
+RewriteEngine on
+# 1 MONTH
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=2629743, public"
+</FilesMatch>
+# 1WEEK
+<FilesMatch "\.(html|htm|txt|xml|js|css)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+# NEVER CACHE - notice the extra directives
+<FilesMatch "\.(php|cgi|pl)$">
+Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidate"
+</FilesMatch>
+## Make sure SSL enabled on server for rewrite to https. 
+## First if they land on www then remove www
+#RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+#RewriteRule ^.*$ https://%1%{REQUEST_URI} [QSA,R=301,L]
+## If they land http, then
+#RewriteCond %{HTTPS} off
+#RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+## Set REQUEST_SCHEME (standard environment variable in Apache 2.4)
+RewriteCond %{HTTPS} off
+RewriteRule .* - [E=REQUEST_SCHEME:http]
+RewriteCond %{HTTPS} on
+RewriteRule .* - [E=REQUEST_SCHEME:https]
+## Permit only image views in files dir
+<FilesMatch "/!(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+RedirectMatch 403 ^.*/files/
+ErrorDocument 403 &nbsp;
+</FilesMatch>
+Options -Indexes
+##  redirect 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+##  unknown
+RewriteCond $1#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^([^\.]+)$ %2?page=$1 [QSA,L]
+##  hotlinking images
+##  RewriteCond %{HTTP_REFERER} !^$
+##  RewriteCond %{HTTP_REFERER} !^http://(.+\.)?betinanielsen\.nu/ [NC]
+##  RewriteRule \.(gif|jpe?g|png)$ - [F,NC,L]
+##  temp security fix
+RewriteCond %{THE_REQUEST} password($|\ |\?) [NC]
+RewriteRule .* - [F]

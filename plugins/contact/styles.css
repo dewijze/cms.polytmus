@@ -1,0 +1,197 @@
+/*----------------------------
+    The contact form
+-----------------------------*/
+
+/* to fool some bots */
+.nope {
+    display:none;
+}
+
+#widthcontainer {
+
+    display:block;
+    
+    width:100%;
+    overflow:hidden;
+    padding: 0 2% 0 2%;
+    margin:0 auto 0 auto;
+
+    border:0px solid red;
+
+    background: #FCFCFC;
+
+    
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+
+}
+#widthcontainer:hover {
+    background: rgba(254, 254, 254, 1);
+}
+
+#contact-outer{
+    margin:2% 0 0 0;
+    display:table;
+}
+
+#sidetext   {
+    
+    vertical-align:top;
+    text-align:left;
+    margin:2%;
+    padding:2%;
+    background:#FFFFFF;
+    font-size:0.857em;
+    line-height:130%;
+    color:#AFAFAF;
+    border:1px solid #d7d7d7;
+
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+}
+
+
+
+#contact {
+    display:table-cell;
+    vertical-align:top;
+    min-height:520px;
+    height:100%;
+    font-size:0.857em;
+    line-height:130%;
+    padding:0 20px 0 20px;
+    /*margin-bottom:-20px;*/
+    color:#9F9191;
+    border:0px solid green;
+
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+}
+
+#contact a{
+    color: #627E99;
+    border-bottom: 1px dotted #627E99;
+}
+
+#contactside {
+    color: #888;
+    font-size:0.857em;
+    line-height:120%;
+    background: rgba(255,255,255, 0.5);
+    border:0px solid red;
+}
+
+
+
+
+#contactform {
+    display:inline-block;
+    width:100%;
+    padding:3px 1% 0 0;
+    margin-top: 0px;
+    height:auto;
+    float:right;
+    border:0px solid red;
+}
+
+#contactinner {
+    float:right;
+    min-height:100%;
+    text-align:left;
+    padding:0;
+    width:99%;
+    border:0px solid red;
+}
+.error[generated=true] {
+    clear:both;
+    position:relative;
+    color: #dc0000;
+    font-size:1em;
+    float:left;
+
+    margin-left:1%;
+    min-width:101%;
+    border:0px solid red;
+
+}
+#contactform textarea {
+    width:100%;
+    height: 240px;
+    resize: vertical;
+    margin:0 0 20px 0;
+    padding: 0 1% 0 1% ;
+}
+#contactform input[type='text'] {
+    width:100%;
+    margin:0;
+    padding: 0 1% 0 1% ;
+}
+
+#contactform input:placeholder {
+    margin-left:50px;
+}
+
+.right {float:right;width:100%;border:}
+
+.wide {float:left;min-width:100%;margin-bottom:5px;}
+
+#response {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#response .success {
+    color: #08a300;
+}
+#response .failure {
+    color: #dc0000;
+}
+
+
+/* -- fake old style hr -- */
+.full-hr {
+    display:inline-block;
+    float:left;
+    background:#fff;
+    height: 1px;
+    min-width: 100%;
+    margin: 10px auto 15px; /* -- hr as margin-bottom for ul -- */
+    border:0px solid red;
+}
+
+
+@media screen and (min-width: 700px){
+    #sidetext   {
+        display:table-cell;
+        width:40%;
+    }
+    #contact {
+        display:table-cell;
+        width:60%;
+    }
+}
+@media screen and (max-width: 699px){
+    #sidetext   {
+        display:block;
+    }
+    #contact {
+        display:table-row;
+        width:100%;
+    }
+    #contactform {
+        margin-top:30px;
+    }
+}

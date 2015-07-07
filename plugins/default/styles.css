@@ -1,0 +1,75 @@
+
+#wrapper {
+    overflow:hidden;
+    min-height:200px;
+    font-size:0.857em;
+    line-height:130%;
+    background: #FCFCFC;
+    padding:20px 20px 0px 20px;
+    margin: 0px auto 25px auto;
+}
+#wrapper > * {
+    vertical-align:top;
+}
+#wrapper a{
+    color: #627E99;
+    border-bottom: 1px dotted #627E99;
+}
+.padwrap{
+    background:#FFFFFF;
+    top:2%;
+    float:right;
+    display:block;
+    padding: 20px;
+    margin-right:2%;
+    min-height:260px;
+
+    border-left:1px solid #d7d7d7;
+}
+.padwrap input[type=password] {
+    min-width:250px;
+    margin-right:10px;
+}
+    .padwrap .hide{
+    padding:0;
+}
+.imgcont {
+    clear:both;
+    display:block;
+    float:left;
+    border:0px solid red;
+    padding:0 auto 0 auto;
+    margin:0;
+}
+.polycircle {
+    display:block;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:1px solid #D7D7D7;
+    margin:3% auto 30px auto;
+    background:#fff;
+}
+.polycircle img {
+    height:150px;
+    margin:-1px 0 0 -1px;
+}
+
+@media screen and (min-width: 900px){
+    .imgcont{
+        width: 26%;
+    }
+    .padwrap {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 899px){
+    .imgcont{
+        width: 99%;
+    }
+    .padwrap {
+        width: 99%;
+    }
+
+}
