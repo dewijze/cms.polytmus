@@ -37,7 +37,7 @@ RewriteCond $1#%{REQUEST_URI} ([^#]*)#(.*)\1$
 RewriteRule ^([^\.]+)$ %2?page=$1 [QSA,L]
 ##  hotlinking images
 ##  RewriteCond %{HTTP_REFERER} !^$
-##  RewriteCond %{HTTP_REFERER} !^http://(.+\.)?betinanielsen\.nu/ [NC]
+##  RewriteCond %{HTTP_REFERER} !^http://(.+\.)?domain\.com/ [NC]
 ##  RewriteRule \.(gif|jpe?g|png)$ - [F,NC,L]
 ##  temp security fix
 RewriteCond %{THE_REQUEST} password($|\ |\?) [NC]
